@@ -1,0 +1,33 @@
+@mixin align-middle {
+    -o-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+@mixin vert-align{
+    font-size: 0;
+    &:before{
+        content: '';
+        height: 100%;
+        width: 0;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    >*{
+        vertical-align: middle;
+        display: inline-block;
+    }
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+//declare variables below

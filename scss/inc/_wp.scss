@@ -1,0 +1,67 @@
+
+/* -----------------------------------------
+   WordPress Core Classes
+----------------------------------------- */
+.alignnone {margin: 0 1em 1em 0;}
+.alignright {float:right; margin:0 0 1em 1em}
+.alignleft {float:left; margin:0 1em 1em 0}
+.aligncenter {display: block; margin-left: auto; margin-right: auto}
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+    img {
+        border: 0 none;
+        height: auto;
+        margin: 0;
+        max-width: 98.5%;
+        padding: 0;
+        width: auto;
+    }
+    &.alignnone {margin: 0 1em 1em 0;}
+    &.alignleft {float:left; margin:0 1em 1em 0}
+    &.alignright {float:right; margin:0 0 1em 1em}
+}
+/* -----------------------------------------
+   General fixes
+----------------------------------------- */
+#wpadminbar {
+    opacity: 0.3;
+    transition: 0.2s opacity linear;
+    -webkit-transform: translateZ(0);
+    &:hover, &:focus{ opacity: 1; }
+}
+body {-webkit-font-smoothing: antialiased;}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=button] {
+    -webkit-appearance: none;
+    -moz-appearance:none;
+}
+/* Responsive video container (YouTube, Vimeo) */
+
+embed, iframe, object { max-width: 100%; }
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  iframe, object, embed{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Align Middle */
+.align-middle {
+    @include align-middle();
+}

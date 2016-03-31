@@ -1,0 +1,141 @@
+@import "inc/vars";
+@import "inc/normalize.scss";
+@import "foundation.scss";
+@import "inc/wp";
+@import "inc/slider"; //comment this line if you dont use slider
+@import "inc/fonts";
+/* Plugins */
+@import "plugins/slick";
+@import "plugins/jquery.fancybox";
+@import "plugins/font-awesome.min.scss";
+
+/* Placeholder styling */
+
+input, textarea{
+    @include placeholder {color: #d1d1d1;}
+}
+
+/* Input Styling */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea { /* STYLES GO THERE */ }
+
+textarea[rows]{
+	/*Styles for TextArea*/
+}
+
+/* -----------------------------------------
+   Typography
+----------------------------------------- */
+a,
+button,
+input[type="submit"],
+input[type="button"],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+    transition-duration: .2s;
+    transition-timing-function: ease-in;
+    transition-property: color, border-color, background-color, opacity;
+}
+
+a:focus {outline:none;}
+p:empty {display: none;}
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignleft {float:left; margin:0 1em 1em 0}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+
+/* ------------------------------------
+    Basic Styles
+------------------------------------- */
+h1 {/*basic heading styles*/}
+h2 {/*basic heading styles*/}
+h3 {/*basic heading styles*/}
+h4 {/*basic heading styles*/}
+h5 {/*basic heading styles*/}
+h6 {/*basic heading styles*/}
+p {/*basic paragraph styles*/}
+ul {
+    /*basic list styles*/
+    li {
+        /*basic list-item styles*/
+    }
+}
+a {
+    &:hover,
+    &:focus {
+        /*basic hover and focus effects*/
+    }
+}
+button, .button {
+    padding: rem-calc(10 12 7);
+    &:hover,
+    &:focus {
+        /*basic hover and focus effects*/
+    }
+}
+
+//use @extend %bgcover; to selector if you need background cover;
+%bgcover{
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+/*-------------------------------
+        Paginator
+-------------------------------*/
+ul.pagination li a{
+    padding: 0 7px;
+    border-radius: 0;
+}
+.pagination.current{
+    color: #fff;
+    background: #2795b6;
+    padding: 1px 7px 2px 7px;
+}
+
+/* ------------------------------------
+    Header Styles
+------------------------------------- */
+
+
+/* ------------------------------------
+    Content Styles
+------------------------------------- */
+
+/* -----------------------------------------
+    Contact Form
+----------------------------------------- */
+.acf-map {
+    width: 100%;
+    height: 400px;
+    margin: 0 0 20px;
+}
+
+.acf-map img {
+   max-width: inherit !important;
+}
+
+/*basic Gravity Form styles and fixes, if you dont need/use this comment or delete styles below*/
+@import "inc/gform";
+
+/* ------------------------------------
+    Footer Styles
+------------------------------------- */
+
+@import "media-screens";

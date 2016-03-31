@@ -1,0 +1,28 @@
+@import "inc/vars";
+
+.gform_fields{
+    margin: 0;
+}
+.gfield{
+    list-style: none;
+}
+.gfield_error {
+    input, textarea {
+        border-color: red;
+    }
+}
+.gfield_label{
+    display: none;
+}
+.gform_footer{
+text-align: right; /*alining of submit button*/
+}
+.validation_error{
+    margin-bottom: 15px;
+    padding: 5px;
+    border: 1px solid red;
+}
+.validation_message{
+    margin-bottom: 10px;
+	color: darken(red, 20);
+}
